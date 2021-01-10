@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package btools.type;
+
+import "btools/type/currency.proto";
+
+/*
+ * Money is a way to store monetary values based on lowest monetary value,
+ * stored with precision and currency.
+ * E.g. a Money object that looks like this:
+ * { amount: 10030, currency: 'EUR', precision: 2 }
+ * would represent 100,30 EUR
+ */
+message Money {
+  // The three-letter currency code defined in ISO 4217.
+  Currency currency = 1;
+  // Amount of money (e.g. 10030 for 100,30)
+  int32 amount = 2;
+  // Which precision is stored.
+  // @default 2
+  int32 precision = 3;
+}

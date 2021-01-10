@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package btools.billing.v1;
+
+import "btools/type/money.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+message BillingPeriod {
+  /*
+   What time charges should be made
+   (-7889231 equals to 3 months before the subscription period ends)
+   */
+  google.protobuf.Duration period = 1;
+  // Number of periods on every charge
+  int32 interval = 2;
+}
+
+message Fee {
+  enum FeeType {
+    FEE_TYPE_UNSPECIFIED = 0;
+    FEE_TYPE_SETUP = 1;
+    FEE_TYPE_EVERY_CHARGE = 2;
+    FEE_TYPE_ENDED_SUBSCRIPTION = 3;
+    FEE_TYPE_TRIAL_END = 4;
+  }
+  FeeType type = 1;
+  btools.type.Money amount = 2;
+}
+
+message Plan {
+  google.protobuf.Duration duration = 2;
+  btools.type.Money price = 3;
+}
+
+message Subscription {
+  string name = 1;
+  string description = 3;
+  string po_number = 4;
+  repeated Fee fees = 5;
+  BillingPeriod billing_period = 6;
+  int32 seats = 7;
+  message SubscriptionDates {
+    google.protobuf.Timestamp start_date = 1;
+    google.protobuf.Timestamp end_date = 2;
+  }
+  SubscriptionDates dates = 8;
+}
+
+message Charge {
+  google.protobuf.Timestamp date = 1;
+  int32 seats = 2;
+  Plan plan = 3;
+}
+
+/*
+ Transaction represent a change in a
+ subscription.
+ */
+message Transaction {
+  string name = 1;
+  string parent = 2;
+  enum Type {
+    TYPE_UNSPECIFIED = 0;
+    TYPE_SEATS = 1;
+    TYPE_PRICE = 2;
+  }
+  Type type = 3;
+  int32 value = 4;
+  google.protobuf.Timestamp date = 5;
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    STATUS_PENDING = 1;
+    STATUS_CHARGED = 2;
+    STATUS_IGNORED = 3;
+  }
+  Status status = 6;
+}
