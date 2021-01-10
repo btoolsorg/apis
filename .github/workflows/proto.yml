@@ -1,0 +1,16 @@
+name: Generate
+on: pull_request
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: arduino/setup-protoc@v1
+        with:
+          version: '3.x'
+      - run: yarn install
+      - run: yarn generate
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: add protoc generated code"
