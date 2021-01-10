@@ -1,0 +1,23 @@
+name: Buf Check and Breaking
+on: pull_request
+
+jobs:
+  lint:
+    name: buf check lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: wizhi/setup-buf@v1
+        with:
+          version: 0.31.1
+      - run: buf check lint
+
+  breaking:
+    name: buf check breaking
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: wizhi/setup-buf@v1
+        with:
+          version: 0.31.1
+      - run: buf check breaking --against "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/thebtools/apis.git#branch=${{ github.base_ref }}"

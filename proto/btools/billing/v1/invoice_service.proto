@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package btools.billing.v1;
+
+import "btools/billing/v1/invoice.proto";
+import "google/protobuf/field_mask.proto";
+
+service InvoiceService {
+  rpc ListInvoices(ListInvoicesRequest) returns (ListInvoicesResponse);
+  rpc GetInvoice(GetInvoiceRequest) returns (GetInvoiceResponse);
+  rpc CreateInvoice(CreateInvoiceRequest) returns (CreateInvoiceResponse);
+  rpc UpdateInvoice(UpdateInvoiceRequest) returns (UpdateInvoiceResponse);
+}
+
+message ListInvoicesRequest {
+  // The maximum number of items to return.
+  int32 page_size = 2;
+
+  // The next_page_token value returned from a previous List request, if any.
+  string page_token = 3;
+}
+
+message ListInvoicesResponse {
+  repeated Invoice invoices = 1;
+  
+  // Token to retrieve the next page of results, or empty if there are no
+  // more results in the list.
+  string next_page_token = 2;
+}
+
+message GetInvoiceRequest {
+  string name = 1;
+}
+
+message GetInvoiceResponse {
+  Invoice invoice = 1;
+}
+
+message CreateInvoiceRequest {
+  Invoice invoice = 1;
+}
+
+message CreateInvoiceResponse {
+  Invoice invoice = 1;
+}
+
+message UpdateInvoiceRequest {
+  // The book resource which replaces the resource on the server.
+  Invoice invoice = 1;
+
+  // The update mask applies to the resource. For the `FieldMask` definition,
+  // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+  google.protobuf.FieldMask update_mask = 2;
+}
+
+message UpdateInvoiceResponse {
+  Invoice invoice = 1;
+}

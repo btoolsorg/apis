@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package btools.billing.v1;
+
+import "btools/type/money.proto";
+
+message Invoice {
+  string name = 1;
+  string customer_id = 2;
+  string description = 3;
+
+  message InvoiceLine {
+    string product_id = 1;
+    string description = 2;
+    btools.type.Money price = 3;
+    int32 quantity = 4;
+  }
+  repeated InvoiceLine lines = 4;
+
+  enum InvoiceStatus {
+    INVOICE_STATUS_UNSPECIFIED = 0;
+    INVOICE_STATUS_PENDING = 1;
+    INVOICE_STATUS_SENT = 2;
+    INVOICE_STATUS_AWAITING_PAYMENT = 3;
+    INVOICE_STATUS_PAID = 4;
+    INVOICE_STATUS_DEPT_COLLECTION = 5;
+  }
+  InvoiceStatus status = 5;
+
+  string created_at = 6;
+}
