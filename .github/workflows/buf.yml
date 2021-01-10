@@ -20,4 +20,4 @@ jobs:
       - uses: wizhi/setup-buf@v1
         with:
           version: 0.31.1
-      - run: buf check breaking --against "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/indivorg/apis.git#branch=${{ github.base_ref }}"
+      - run: buf check breaking --against "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/thebtools/apis.git#branch=${{ github.base_ref }}"
