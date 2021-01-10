@@ -1,3 +1,10 @@
+# 1.0.0 (2021-01-10)
+
+
+### Features
+
+* Subscription, Invoice and Common declarations ([#1](https://github.com/thebtools/apis/issues/1)) ([4192564](https://github.com/thebtools/apis/commit/419256416e44ced272505ab19365ddf6fa62dec0))
+
 # [2.10.0](https://github.com/indivorg/apis/compare/v2.9.0...v2.10.0) (2020-12-31)
 
 ### Features
