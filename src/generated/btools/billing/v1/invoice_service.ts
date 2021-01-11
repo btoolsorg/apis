@@ -6,6 +6,10 @@ import { GrpcMethod, GrpcStreamMethod } from '@nestjs/microservices';
 
 export interface ListInvoicesRequest {
   /**
+   *  The parent resource name, for example, "accounts/bjerkio".
+   */
+  parent: string;
+  /**
    *  The maximum number of items to return.
    */
   pageSize: number;

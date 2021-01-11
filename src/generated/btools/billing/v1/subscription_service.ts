@@ -9,6 +9,10 @@ import { GrpcMethod, GrpcStreamMethod } from '@nestjs/microservices';
 
 export interface ListSubscriptionsRequest {
   /**
+   *  The parent resource name, for example, "accounts/bjerkio".
+   */
+  parent: string;
+  /**
    *  The maximum number of items to return.
    */
   pageSize: number;
@@ -71,7 +75,7 @@ export interface DeleteSubscriptionResponse {}
 
 export interface ListTransactionsRequest {
   /**
-   *  The parent resource name, for example, "subscriptions/sub1".
+   *  The parent resource name, for example, "accounts/bjerkio/subscriptions/sub1".
    */
   parent: string;
   /**
