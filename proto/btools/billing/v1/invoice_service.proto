@@ -13,6 +13,9 @@ service InvoiceService {
 }
 
 message ListInvoicesRequest {
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+
   // The maximum number of items to return.
   int32 page_size = 2;
 
