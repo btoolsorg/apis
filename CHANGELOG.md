@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/thebtools/apis/compare/v1.0.0...v1.1.0) (2021-01-11)
+
+
+### Features
+
+* Multi-tenancy ([#2](https://github.com/thebtools/apis/issues/2)) ([02959b4](https://github.com/thebtools/apis/commit/02959b4067a7aff0e7d0e2008bd389216d0438d0))
+
 # 1.0.0 (2021-01-10)
 
 
