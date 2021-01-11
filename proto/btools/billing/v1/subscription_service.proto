@@ -18,6 +18,9 @@ service SubscriptionService {
 }
 
 message ListSubscriptionsRequest {
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+
   // The maximum number of items to return.
   int32 page_size = 2;
 
@@ -71,7 +74,7 @@ message DeleteSubscriptionRequest {
 message DeleteSubscriptionResponse {}
 
 message ListTransactionsRequest {
-  // The parent resource name, for example, "subscriptions/sub1".
+  // The parent resource name, for example, "accounts/bjerkio/subscriptions/sub1".
   string parent = 1;
 
   // The maximum number of items to return.
