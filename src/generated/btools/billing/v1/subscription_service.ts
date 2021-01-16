@@ -48,6 +48,10 @@ export interface CreateSubscriptionRequest {
 }
 
 export interface CreateSubscriptionResponse {
+  /**
+   *  The parent resource name, for example, "accounts/bjerkio".
+   */
+  parent: string;
   subscription: Subscription | undefined;
 }
 

@@ -40,7 +40,10 @@ message GetInvoiceResponse {
 }
 
 message CreateInvoiceRequest {
-  Invoice invoice = 1;
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+
+  Invoice invoice = 2;
 }
 
 message CreateInvoiceResponse {
