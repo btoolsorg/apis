@@ -51,7 +51,10 @@ message CreateSubscriptionRequest {
 }
 
 message CreateSubscriptionResponse {
-  Subscription subscription = 1;
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+  
+  Subscription subscription = 2;
 }
 
 message UpdateSubscriptionRequest {

@@ -37,6 +37,10 @@ export interface GetInvoiceResponse {
 }
 
 export interface CreateInvoiceRequest {
+  /**
+   *  The parent resource name, for example, "accounts/bjerkio".
+   */
+  parent: string;
   invoice: Invoice | undefined;
 }
 
