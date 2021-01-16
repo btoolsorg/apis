@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/thebtools/apis/compare/v1.1.0...v1.2.0) (2021-01-16)
+
+
+### Features
+
+* Add parent field to create requests ([#3](https://github.com/thebtools/apis/issues/3)) ([6b07f88](https://github.com/thebtools/apis/commit/6b07f88025f81ed795f94850efbab68121fd72ee))
+
 # [1.1.0](https://github.com/thebtools/apis/compare/v1.0.0...v1.1.0) (2021-01-11)
 
 
