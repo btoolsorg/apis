@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/thebtools/apis/compare/v1.3.0...v1.4.0) (2021-04-10)
+
+
+### Features
+
+* Add Billing System definitions ([#5](https://github.com/thebtools/apis/issues/5)) ([1d1e648](https://github.com/thebtools/apis/commit/1d1e64861f0939c3529a757dca96ec39a4597966))
+
 # [1.3.0](https://github.com/thebtools/apis/compare/v1.2.0...v1.3.0) (2021-04-10)
 
 
