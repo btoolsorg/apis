@@ -3,11 +3,21 @@ syntax = "proto3";
 package btools.billing.v1;
 
 import "btools/type/money.proto";
+import "google/protobuf/timestamp.proto";
 
 message Invoice {
+  // Resource name, for example, "accounts/bjerkio/tripletex/_default/invoices/1337"
   string name = 1;
-  string customer_id = 2;
+
+  // Customer, for example, "accounts/bjerkio/tripletex/_default/customers/1337"
+  string customer = 2;
+  
   string description = 3;
+
+  // Optional. Resource labels associated with this invoice.
+  // No more than 64 user labels can be associated with a given resource.  Label
+  // keys and values can be no longer than 63 characters.
+  map<string, string> labels = 4;
 
   message InvoiceLine {
     string product_id = 1;
@@ -15,7 +25,7 @@ message Invoice {
     btools.type.Money price = 3;
     int32 quantity = 4;
   }
-  repeated InvoiceLine lines = 4;
+  repeated InvoiceLine lines = 5;
 
   enum InvoiceStatus {
     INVOICE_STATUS_UNSPECIFIED = 0;
@@ -25,7 +35,9 @@ message Invoice {
     INVOICE_STATUS_PAID = 4;
     INVOICE_STATUS_DEPT_COLLECTION = 5;
   }
-  InvoiceStatus status = 5;
+  InvoiceStatus status = 6;
 
-  string created_at = 6;
+  google.protobuf.Timestamp create_time = 7;
+  google.protobuf.Timestamp update_time = 8;
+  google.protobuf.Timestamp expire_time = 9;
 }
