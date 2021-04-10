@@ -1,13 +1,33 @@
 /* eslint-disable */
+import { Timestamp } from '../../../google/protobuf/timestamp';
 import { Money } from '../../../btools/type/money';
 
 export interface Invoice {
+  /**
+   *  Resource name, for example, "accounts/bjerkio/tripletex/_default/invoices/1337"
+   */
   name: string;
-  customerId: string;
+  /**
+   *  Customer, for example, "accounts/bjerkio/tripletex/_default/customers/1337"
+   */
+  customer: string;
   description: string;
+  /**
+   *  Optional. Resource labels associated with this invoice.
+   *  No more than 64 user labels can be associated with a given resource.  Label
+   *  keys and values can be no longer than 63 characters.
+   */
+  labels: { [key: string]: string };
   lines: Invoice_InvoiceLine[];
   status: Invoice_InvoiceStatus;
-  createdAt: string;
+  createTime: Timestamp | undefined;
+  updateTime: Timestamp | undefined;
+  expireTime: Timestamp | undefined;
+}
+
+export interface Invoice_LabelsEntry {
+  key: string;
+  value: string;
 }
 
 export interface Invoice_InvoiceLine {
