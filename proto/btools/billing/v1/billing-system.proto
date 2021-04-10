@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+package btools.billing.v1;
+
+message BillingSystem {
+  // Resource name, for example, "accounts/bjerkio/tripletex/1337"
+  string name = 1;
+
+  // Name of integration
+  string title = 2;
+
+  google.protobuf.Timestamp create_time = 3;
+  google.protobuf.Timestamp update_time = 4;
+
+  oneof settings {
+    AccountingSystemTripletex tripletex = 5;
+  }
+}
+
+message BillingSystemTripletexSettings {
+  string employee_token = 1;
+}
