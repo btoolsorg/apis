@@ -72,5 +72,5 @@ message Address {
   string organization = 11;
 
   // Indicates if it's the tenant's current address.
-  google.protobuf.BoolValue current = 12;
+  bool current = 12;
 }
