@@ -74,14 +74,14 @@ export enum Address_AddressType {
   /** ADDRESS_TYPE_UNSPECIFIED -  Default value.
    */
   ADDRESS_TYPE_UNSPECIFIED = 0,
-  /** INVOICE -  Invoice use.
+  /** ADDRESS_TYPE_INVOICE -  Invoice use.
    */
-  INVOICE = 1,
-  /** POSTAL -  Postal use.
+  ADDRESS_TYPE_INVOICE = 1,
+  /** ADDRESS_TYPE_POSTAL -  Postal use.
    */
-  POSTAL = 2,
-  /** VISITOR -  Visitor use.
+  ADDRESS_TYPE_POSTAL = 2,
+  /** ADDRESS_TYPE_VISITOR -  Visitor use.
    */
-  VISITOR = 3,
+  ADDRESS_TYPE_VISITOR = 3,
   UNRECOGNIZED = -1,
 }
