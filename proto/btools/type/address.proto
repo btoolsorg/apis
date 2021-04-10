@@ -9,13 +9,13 @@ message Address {
     ADDRESS_TYPE_UNSPECIFIED = 0;
 
     // Invoice use.
-    INVOICE = 1;
+    ADDRESS_TYPE_INVOICE = 1;
 
     // Postal use.
-    POSTAL = 2;
+    ADDRESS_TYPE_POSTAL = 2;
 
     // Visitor use.
-    VISITOR = 3;
+    ADDRESS_TYPE_VISITOR = 3;
   }
   // The type of the address.
   AddressType type = 1;
