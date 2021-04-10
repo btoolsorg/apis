@@ -4,6 +4,7 @@ syntax = "proto3";
 package btools.customer.v1;
 
 import "btools/type/address.proto";
+import "google/protobuf/timestamp.proto";
 
 message Customer {
   // Resource name, for example, "accounts/bjerkio/tripletex/_default/customer/1337"
