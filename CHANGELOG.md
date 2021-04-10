@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/thebtools/apis/compare/v1.2.0...v1.3.0) (2021-04-10)
+
+
+### Features
+
+* Add customer definitions ([#4](https://github.com/thebtools/apis/issues/4)) ([9e82393](https://github.com/thebtools/apis/commit/9e823931cbc9039b6a13cfaf6b2d30514409a9f0))
+
 # [1.2.0](https://github.com/thebtools/apis/compare/v1.1.0...v1.2.0) (2021-01-16)
 
 
