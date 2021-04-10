@@ -1,0 +1,26 @@
+
+syntax = "proto3";
+
+package btools.customer.v1;
+
+import "btools/type/address.proto";
+import "google/protobuf/timestamp.proto";
+
+message Customer {
+  // Resource name, for example, "accounts/bjerkio/tripletex/_default/customer/1337"
+  string name = 1;
+
+  // Name of customer
+  string title = 2;
+
+  repeated btools.type.Address addresses = 3;
+
+  // Vat ID, organization number (Company Identification Number)
+  string vat_identification = 4;
+
+  // External identifier (e.g. the internal ID of this resource at Tripletex)
+  string external_id = 5;
+
+  google.protobuf.Timestamp create_time = 6;
+  google.protobuf.Timestamp update_time = 7;
+}
