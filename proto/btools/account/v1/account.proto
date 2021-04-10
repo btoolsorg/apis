@@ -4,6 +4,7 @@ syntax = "proto3";
 package btools.account.v1;
 
 import "btools/type/address.proto";
+import "google/protobuf/timestamp.proto";
 
 message Account {
   // Resource name, for example, "accounts/bjerkio"

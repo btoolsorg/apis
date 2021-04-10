@@ -3,6 +3,8 @@ syntax = "proto3";
 
 package btools.billing.v1;
 
+import "google/protobuf/timestamp.proto";
+
 message BillingSystem {
   // Resource name, for example, "accounts/bjerkio/tripletex/1337"
   string name = 1;
