@@ -15,11 +15,11 @@ message BillingSystem {
   google.protobuf.Timestamp create_time = 3;
   google.protobuf.Timestamp update_time = 4;
 
-  oneof settings {
-    AccountingSystemTripletex tripletex = 5;
+  message TripletexSettings {
+    string employee_token = 1;
   }
-}
 
-message BillingSystemTripletexSettings {
-  string employee_token = 1;
+  oneof settings {
+    TripletexSettings tripletex = 5;
+  }
 }
