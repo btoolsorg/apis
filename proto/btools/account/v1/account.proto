@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+package btools.account.v1;
+
+import "btools/type/address.proto";
+import "google/protobuf/timestamp.proto";
+
+message Account {
+  // Resource name, for example, "accounts/bjerkio"
+  string name = 1;
+
+  // Name of customer
+  string title = 2;
+
+  repeated btools.type.Address addresses = 3;
+
+  // Vat ID, organization number (Company Identification Number)
+  string vat_identification = 4;
+
+  google.protobuf.Timestamp create_time = 5;
+  google.protobuf.Timestamp update_time = 6;
+}
