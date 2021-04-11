@@ -1,5 +1,8 @@
 name: Generate
-on: pull_request
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   generate:
