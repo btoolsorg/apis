@@ -24,7 +24,7 @@ message ListBillingSystemsRequest {
 }
 
 message ListBillingSystemsResponse {
-  repeated BillingSystem BillingSystems = 1;
+  repeated BillingSystem billing_systems = 1;
   
   // Token to retrieve the next page of results, or empty if there are no
   // more results in the list.
@@ -36,7 +36,7 @@ message GetBillingSystemRequest {
 }
 
 message GetBillingSystemResponse {
-  BillingSystem BillingSystem = 1;
+  BillingSystem billing_system = 1;
 }
 
 message CreateBillingSystemRequest {
@@ -52,7 +52,7 @@ message CreateBillingSystemResponse {
 
 message UpdateBillingSystemRequest {
   // The book resource which replaces the resource on the server.
-  BillingSystem BillingSystem = 1;
+  BillingSystem billing_system = 1;
 
   // The update mask applies to the resource. For the `FieldMask` definition,
   // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
@@ -60,5 +60,5 @@ message UpdateBillingSystemRequest {
 }
 
 message UpdateBillingSystemResponse {
-  BillingSystem BillingSystem = 1;
+  BillingSystem billing_system = 1;
 }
