@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package btools.customer.v1;
 
-import "btools/billing/v1/customer.proto";
+import "btools/customer/v1/customer.proto";
 import "google/protobuf/field_mask.proto";
 
 service CustomerService {
