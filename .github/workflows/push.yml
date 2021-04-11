@@ -34,15 +34,3 @@ jobs:
           ${{ runner.os }}-yarn-
     - run: yarn install
     - run: yarn run build
-    - name: Semantic Release
-      id: semantic
-      uses: cycjimmy/semantic-release-action@v2
-      with:
-        semantic_version: 17.0.7
-        extra_plugins: |
-          @semantic-release/changelog@5.0.1
-          @semantic-release/git
-          @semantic-release/npm
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
