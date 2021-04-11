@@ -24,7 +24,7 @@ message ListCustomersRequest {
 }
 
 message ListCustomersResponse {
-  repeated Customer Customers = 1;
+  repeated Customer customers = 1;
   
   // Token to retrieve the next page of results, or empty if there are no
   // more results in the list.
@@ -36,23 +36,23 @@ message GetCustomerRequest {
 }
 
 message GetCustomerResponse {
-  Customer Customer = 1;
+  Customer customer = 1;
 }
 
 message CreateCustomerRequest {
   // The parent resource name, for example, "accounts/bjerkio".
   string parent = 1;
 
-  Customer Customer = 2;
+  Customer customer = 2;
 }
 
 message CreateCustomerResponse {
-  Customer Customer = 1;
+  Customer customer = 1;
 }
 
 message UpdateCustomerRequest {
   // The book resource which replaces the resource on the server.
-  Customer Customer = 1;
+  Customer customer = 1;
 
   // The update mask applies to the resource. For the `FieldMask` definition,
   // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
@@ -60,5 +60,5 @@ message UpdateCustomerRequest {
 }
 
 message UpdateCustomerResponse {
-  Customer Customer = 1;
+  Customer customer = 1;
 }
