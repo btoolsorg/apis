@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package btools.billing.v1;
+
+import "btools/billing/v1/billing_system.proto";
+import "google/protobuf/field_mask.proto";
+
+service BillingSystemService {
+  rpc ListBillingSystems(ListBillingSystemsRequest) returns (ListBillingSystemsResponse);
+  rpc GetBillingSystem(GetBillingSystemRequest) returns (GetBillingSystemResponse);
+  rpc CreateBillingSystem(CreateBillingSystemRequest) returns (CreateBillingSystemResponse);
+  rpc UpdateBillingSystem(UpdateBillingSystemRequest) returns (UpdateBillingSystemResponse);
+}
+
+message ListBillingSystemsRequest {
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+
+  // The maximum number of items to return.
+  int32 page_size = 2;
+
+  // The next_page_token value returned from a previous List request, if any.
+  string page_token = 3;
+}
+
+message ListBillingSystemsResponse {
+  repeated BillingSystem billing_systems = 1;
+  
+  // Token to retrieve the next page of results, or empty if there are no
+  // more results in the list.
+  string next_page_token = 2;
+}
+
+message GetBillingSystemRequest {
+  string name = 1;
+}
+
+message GetBillingSystemResponse {
+  BillingSystem billing_system = 1;
+}
+
+message CreateBillingSystemRequest {
+  // The parent resource name, for example, "accounts/bjerkio".
+  string parent = 1;
+
+  BillingSystem billing_system = 2;
+}
+
+message CreateBillingSystemResponse {
+  BillingSystem billing_system = 1;
+}
+
+message UpdateBillingSystemRequest {
+  // The book resource which replaces the resource on the server.
+  BillingSystem billing_system = 1;
+
+  // The update mask applies to the resource. For the `FieldMask` definition,
+  // see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+  google.protobuf.FieldMask update_mask = 2;
+}
+
+message UpdateBillingSystemResponse {
+  BillingSystem billing_system = 1;
+}
