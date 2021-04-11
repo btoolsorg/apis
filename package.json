@@ -1,6 +1,6 @@
 {
   "name": "@btoolsorg/apis",
-  "version": "1.0.0-dev",
+  "version": "1.5.0",
   "author": "Bjerk AS",
   "main": "dist/index.js",
   "license": "apache-2.0",
