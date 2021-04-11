@@ -1,5 +1,5 @@
 {
-  "name": "@btoolsorg/apis",
+  "name": "@btools/apis",
   "version": "1.5.0",
   "author": "Bjerk AS",
   "main": "dist/index.js",
