@@ -43,11 +43,11 @@ message CreateBillingSystemRequest {
   // The parent resource name, for example, "accounts/bjerkio".
   string parent = 1;
 
-  BillingSystem BillingSystem = 2;
+  BillingSystem billing_system = 2;
 }
 
 message CreateBillingSystemResponse {
-  BillingSystem BillingSystem = 1;
+  BillingSystem billing_system = 1;
 }
 
 message UpdateBillingSystemRequest {
