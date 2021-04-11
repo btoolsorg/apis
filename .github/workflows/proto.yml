@@ -16,4 +16,6 @@ jobs:
       - run: yarn generate
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          commit_user_name: bjerk-bot
+          commit_user_email: bjerkbot@bjerk.io
           commit_message: "chore: add protoc generated code"
