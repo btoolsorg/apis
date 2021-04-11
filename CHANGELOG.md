@@ -47,6 +47,13 @@
 - Release it!
   ([66e9af6](https://github.com/indivorg/apis/commit/66e9af6ff7f11123a039bb8d0e3972e6776e5459))
 
+## [1.5.0](https://www.github.com/btoolsorg/apis/compare/v1.4.0...v1.5.0) (2021-04-11)
+
+
+### Features
+
+* Release under Apache 2.0 ([#7](https://www.github.com/btoolsorg/apis/issues/7)) ([be90c2f](https://www.github.com/btoolsorg/apis/commit/be90c2f7048ada9a5b2488dc5a67863aeba048e3))
+
 ## [2.8.6](https://github.com/indivorg/apis/compare/v2.8.5...v2.8.6) (2020-12-29)
 
 ### Bug Fixes
