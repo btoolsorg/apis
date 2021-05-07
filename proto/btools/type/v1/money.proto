@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package btools.type.v1.v1;
+package btools.type.v1;
 
 import "btools/type/v1/currency.proto";
 
