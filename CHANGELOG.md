@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/btoolsorg/apis/compare/v1.6.0...v1.7.0) (2021-05-07)
+
+
+### Features
+
+* Reduce to basic declarations ([#13](https://www.github.com/btoolsorg/apis/issues/13)) ([c94f163](https://www.github.com/btoolsorg/apis/commit/c94f163359c3f69d1cb4104489d5942668d47f94))
+
 ## [1.6.0](https://www.github.com/btoolsorg/apis/compare/v1.5.0...v1.6.0) (2021-04-11)
 
 
