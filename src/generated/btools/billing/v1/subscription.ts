@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Duration } from '../../../google/protobuf/duration';
-import { Money } from '../../../btools/type/money';
+import { Money } from '../../../btools/type/v1/money';
 import { Timestamp } from '../../../google/protobuf/timestamp';
 
 export interface BillingPeriod {

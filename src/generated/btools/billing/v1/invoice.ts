@@ -1,16 +1,12 @@
 /* eslint-disable */
 import { Timestamp } from '../../../google/protobuf/timestamp';
-import { Money } from '../../../btools/type/money';
+import { Money } from '../../../btools/type/v1/money';
 
 export interface Invoice {
   /**
-   *  Resource name, for example, "accounts/bjerkio/tripletex/_default/invoices/1337"
+   *  Resource name, for example, "accounts/bjerkio/customers/1337/invoices/1337"
    */
   name: string;
-  /**
-   *  Customer, for example, "accounts/bjerkio/tripletex/_default/customers/1337"
-   */
-  customer: string;
   description: string;
   /**
    *  Optional. Resource labels associated with this invoice.

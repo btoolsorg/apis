@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Address } from '../../../btools/type/address';
+import { Address } from '../../../btools/type/v1/address';
 import { Timestamp } from '../../../google/protobuf/timestamp';
 
 export interface Account {

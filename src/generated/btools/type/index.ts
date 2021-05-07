@@ -1,7 +1,3 @@
-export * from './address';
-export * from './currency';
-export * from './money';
+import * as v1 from './v1';
 
-export const BTOOLS_TYPE_PACKAGE_NAME = 'btools.type';
-
-export const protobufPackage = 'btools.type';
+export { v1 };

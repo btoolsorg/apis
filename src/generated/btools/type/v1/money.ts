@@ -1,9 +1,9 @@
 /* eslint-disable */
-import { Currency } from '../../btools/type/currency';
+import { Currency } from '../../../btools/type/v1/currency';
 
 /**
  *
- *  Money is a way to store monetary values based on lowest monetary value,
+ *  Money used to store monetary values based on lowest monetary value,
  *  stored with precision and currency.
  *  E.g. a Money object that looks like this:
  *  { amount: 10030, currency: 'EUR', precision: 2 }
