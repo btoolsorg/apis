@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package btools.type;
+package btools.type.v1;
 
-import "btools/type/currency.proto";
+import "btools/type/v1/currency.proto";
 
 /*
- * Money is a way to store monetary values based on lowest monetary value,
+ * Money used to store monetary values based on lowest monetary value,
  * stored with precision and currency.
  * E.g. a Money object that looks like this:
  * { amount: 10030, currency: 'EUR', precision: 2 }
