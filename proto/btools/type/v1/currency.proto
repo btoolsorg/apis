@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package btools.type.v1;
+package btools.type.v1.v1;
 
 // Currency codes as specified in ISO 4217
 enum Currency {

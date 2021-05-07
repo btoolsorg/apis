@@ -25,12 +25,12 @@ message Fee {
     FEE_TYPE_TRIAL_END = 4;
   }
   FeeType type = 1;
-  btools.type.Money amount = 2;
+  btools.type.v1.Money amount = 2;
 }
 
 message Plan {
   google.protobuf.Duration duration = 2;
-  btools.type.Money price = 3;
+  btools.type.v1.Money price = 3;
 }
 
 message Subscription {

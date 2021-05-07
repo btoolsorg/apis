@@ -19,7 +19,7 @@ message Invoice {
   message InvoiceLine {
     string product_id = 1;
     string description = 2;
-    btools.type.Money price = 3;
+    btools.type.v1.Money price = 3;
     int32 quantity = 4;
   }
   repeated InvoiceLine lines = 4;
