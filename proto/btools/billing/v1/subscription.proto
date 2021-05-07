@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package btools.billing.v1;
 
-import "btools/type/money.proto";
+import "btools/type/v1/money.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 
