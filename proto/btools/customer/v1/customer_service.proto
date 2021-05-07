@@ -24,7 +24,7 @@ message ListCustomersRequest {
 }
 
 message ListCustomersResponse {
-  repeated Customer Customers = 1;
+  repeated Customer customers = 1;
   
   // Token to retrieve the next page of results, or empty if there are no
   // more results in the list.

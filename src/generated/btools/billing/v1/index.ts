@@ -1,4 +1,5 @@
 export * from './billing_system';
+export * from './billing_system_service';
 export * from './invoice';
 export * from './invoice_service';
 export * from './subscription';
