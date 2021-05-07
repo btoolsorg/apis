@@ -7,6 +7,6 @@ lint:
     - DEFAULT
   ignore_only:
     ENUM_VALUE_PREFIX:
-      - btools/type/currency.proto
+      - btools/type/v1/currency.proto
     PACKAGE_VERSION_SUFFIX:
       - btools/type
